@@ -81,6 +81,13 @@ gameActive = true;
 statusText.textContent = "Player X's turn";
 }
 
+function newGame() {
+scores = { X: 0, O: 0, T: 0 };
+updateScores();
+resetBoard();
+}
 
 document.getElementById('restart').addEventListener('click', resetBoard);
+document.getElementById('newGame').addEventListener('click', newGame);
+resetBoard();
 });
